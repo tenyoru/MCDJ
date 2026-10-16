@@ -1,0 +1,30 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "edit": {
+      "*": "deny",
+      "AGENTS.md": "allow",
+      "justfile": "allow",
+      "flake.nix": "allow",
+      "flake.lock": "allow",
+      "shell.nix": "allow",
+      ".gitignore": "allow"
+    },
+    "bash": {
+      "*": "ask",
+      "zig build": "allow",
+      "zig build *": "allow",
+      "zig test *": "allow",
+      "zig fmt --check *": "allow",
+      "zig version": "allow",
+      "just": "allow",
+      "just build": "allow",
+      "just test": "allow",
+      "just run*": "allow",
+      "git status*": "allow",
+      "git diff*": "allow",
+      "git log*": "allow",
+      "git show*": "allow"
+    }
+  }
+}
